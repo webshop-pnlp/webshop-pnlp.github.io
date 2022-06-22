@@ -2,6 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8">
+    <title>WebShop</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
     <link rel="icon" type="image/x-icon" href="/assets/static/favicon.ico">
@@ -36,14 +37,35 @@
     </header>
 
     <main id="content" class="main-content" role="main">
-      <div style="text-align:center;">
+      <p>Code and paper will be released soon!</p>
+
+<div style="text-align:center;">
   <img src="/assets/static/trajectory.png" height="350px" /> &nbsp;
   <img src="/assets/static/recording.gif" height="350px" />
 </div>
 
 <h2 id="abstract">Abstract</h2>
-
 <p>Most existing benchmarks for grounding language in interactive environments either lack realistic linguistic elements, or prove difficult to scale up due to substantial human involvement in the collection of data or feedback signals. We develop WebShop – a simulated e-commerce website environment with 1.18 million real-world products and 12,087 crowd-sourced text instructions. In this environment, an agent needs to navigate multiple types of webpages and issue diverse actions to find, customize, and purchase a product given an instruction. WebShop provides several challenges including understanding compositional instructions, query (re-)formulation, dealing with noisy text in webpages, and performing strategic exploration. We collect over 1,600 human trajectories to first validate the benchmark, then train and evaluate a diverse range of agents using reinforcement learning, imitation learning, and pre-trained image and language models. Our best model achieves a task success rate of 29%, which significantly outperforms rule heuristics but is far lower than expert human performance (59%). We also analyze agent and human trajectories and ablate various model components to provide insights for developing future agents with stronger language understanding and decision making abilities. Finally, we show our agent trained on WebShop exhibits non-trivial sim-to-real transfer when evaluated on amazon.com, indicating the potential value of our benchmark for developing practical web agents that can operate in the wild.</p>
+
+<h2 id="webshop-environment">WebShop Environment</h2>
+<div style="text-align:center;">
+    <img src="/assets/static/webshop-diagram.png" width="90%" />
+</div>
+
+<p>The diagram’s components are as follows:</p>
+<ul>
+  <li>A: An example task trajectory in HTML mode, where a user can
+    <ul>
+      <li>(1) search a query in a search page</li>
+      <li>(2) click a product item in a results page</li>
+      <li>(3) choose a color option in a item page</li>
+      <li>(4) check item-detail pages and go back to the item page</li>
+      <li>(5) finally buy the product to end the episode and recieve and reward.</li>
+    </ul>
+  </li>
+  <li>B: The results page in simple mode for agent training and evaluation. The <span style="color:blue">blue</span> text indicates clickable actions and <strong>bold</strong> text indicates the action selected by the agent.</li>
+  <li>C: The product notation (described in section 3 of the paper) corresponding to the product in A. The attributes \(Y_{att}\) are hidden from the task performer.</li>
+</ul>
 
 <h2 id="demos">Demos</h2>
 <p>The below slides show the step-by-step actions of trajectories generated from different agents and entities performing the task of searching for a product based on a goal instruction.</p>
