@@ -310,6 +310,10 @@ a:hover { text-decoration: underline; }
 
 @media screen and (max-width: 42em) { .project-tagline { font-size: 1rem; } }
 
+.project-link { color: #fff; opacity: 0.85; }
+
+.project-link:hover { opacity: 0.4; text-decoration: none; }
+
 .main-content { word-wrap: break-word; }
 
 .main-content :first-child { margin-top: 0; }

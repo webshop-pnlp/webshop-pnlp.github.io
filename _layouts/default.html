@@ -30,13 +30,22 @@
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ site.title }}</h1>
       {% if site.description %}
-        <h2 class="project-tagline">{{ site.description }}</h2>
+      <h2 class="project-tagline">{{ site.description }}</h2>
       {% endif %}
+      {% for author in site.authors %}
+      <a class="project-link" href={{ author.link }}>{{ author.name }}</a>
+      {% if forloop.last == false %}
+      &emsp;
+      {% endif %}
+      {% endfor %}
+      <div style="margin-top: 1rem">
+        <a class="project-link" href="https://princeton-nlp.github.io/">Princeton University</a>
+      </div>
       {% if site.code %}
-        <a href="{{ site.code }}" class="btn">Code</a>
+      <a href="{{ site.code }}" class="btn">Code</a>
       {% endif %}
       {% if site.paper %}
-        <a href="{{ site.paper }}" class="btn">Paper</a>
+      <a href="{{ site.paper }}" class="btn">Paper</a>
       {% endif %}
     </header>
 
