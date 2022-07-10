@@ -63,7 +63,7 @@ a {
 
 .btn {
   display: inline-block;
-  margin-bottom: 1rem;
+  margin-top: 1.5rem;
   color: rgba(255, 255, 255, 0.7);
   background-color: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.2);
@@ -109,10 +109,10 @@ a {
   color: $header-heading-color;
   text-align: center;
   background-color: $header-bg-color;
-  background-image: linear-gradient(345deg, $header-bg-color-secondary, $header-bg-color);
+  background-image: linear-gradient(90deg, $header-bg-color-secondary, $header-bg-color);
 
   @include large {
-    padding: 5rem 6rem;
+    padding: 4rem 6rem;
   }
 
   @include medium {
@@ -142,7 +142,7 @@ a {
 }
 
 .project-tagline {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-weight: normal;
   opacity: 0.7;
 
