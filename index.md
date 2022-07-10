@@ -27,7 +27,7 @@ The diagram's components are as follows:
 * B: The results page in simple mode for agent training and evaluation. The <span style="color:blue">blue</span> text indicates clickable actions and **bold** text indicates the action selected by the agent.
 * C: The product notation (described in section 3 of the paper) corresponding to the product in A. The attributes $$Y_{att}$$ are hidden from the task performer.
 
-## Demos
+## Demo
 ### Interactive Web App
 <iframe src="https://hf.space/gradioiframe/webshop/amazon_shop/+" width="100%" height=900></iframe>
 
