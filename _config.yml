@@ -1,6 +1,7 @@
 title: WebShop
 description: Towards Scalable Real-World Web Interaction with Grounded Language Agents
-code: https://github.com/princeton-nlp/web-agent-site
+env_repo: https://github.com/princeton-nlp/WebShop
+mdl_repo: # To do
 paper: https://arxiv.org/abs/2207.01206
 twitter:
     username: princeton_nlp
